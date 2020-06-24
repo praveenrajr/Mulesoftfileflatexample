@@ -1,0 +1,15 @@
+form: FLATFILE
+name: 'flatFile'
+segments:
+- id: 'Customer'
+  tag: '1'
+  name: Customer Collection
+  values:
+  - { name: 'Customer_Number', type: String, length: 32 }
+  - { name: 'Customer_Name', type: String, length: 32 }
+  - { name: 'Customer_ID', type: Integer, length: 5 }
+- id: 'Footer'
+  tag: '1'
+  name: Footer Name
+  values:
+  - { id: 'CustomerCount', name: 'CustomerCount', type: Integer, length: 6 }

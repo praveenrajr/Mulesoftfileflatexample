@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="customerFlat" format="flatfile">
+      <types:shape format="flatfile" element="Customer" location="Customer.ffd"/>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#149ee5ac-3dce-48fa-8506-cb4cb0d57589">
+    <types:processor-declaration>
+      <types:output-event>
+        <types:message>
+          <types:payload type="customerFlat"/>
+        </types:message>
+      </types:output-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>
